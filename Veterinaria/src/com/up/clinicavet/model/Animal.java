@@ -1,7 +1,7 @@
 package com.up.clinicavet.model;
 
 import java.sql.Date;
-//a
+//ab
 public class Animal extends Especie{
 	private int 	id;
 	private String 	nome;
