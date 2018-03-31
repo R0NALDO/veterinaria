@@ -1,13 +1,18 @@
-package com.up.clinicavet.model;
+package com.up.clinicavet.dao;
 
 import java.sql.Date;
 
-public class Animal{
+import com.up.clinicavet.model.Especie;
+
+public class AnimalDAO extends Especie{
 	private int 	id;
 	private String 	nome;
 	private Date 	nascimento;
-	private Especie especieId;
+	private Especie especie;
 	
+	public AnimalDAO(int id, String nome) { //construtor, tbm chama a classe espécie
+		super(id, nome);
+	}
 	public int getId() {
 		return id;
 	}
@@ -27,9 +32,9 @@ public class Animal{
 		this.nascimento = nascimento;
 	}
 	public Especie getEspecie() {
-		return especieId;
+		return especie;
 	}
 	public void setEspecie(Especie especie) {
-		this.especieId = especie;
+		this.especie = especie;
 	}
 }

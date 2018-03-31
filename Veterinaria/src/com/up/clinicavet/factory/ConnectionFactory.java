@@ -1,4 +1,4 @@
-package com.up.clinicavet.model;
+package com.up.clinicavet.factory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
