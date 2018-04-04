@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class JDBC {
+public class JDBC { //faz a conexão com a base
 	public static void main(String[] args) {
 		Connection conexao = null;
 		PreparedStatement statement = null;
@@ -33,6 +33,5 @@ public class JDBC {
 			}
 		}
 		System.out.println("Conectado");
-		// conexao.close(); .php?id= 
 	}
 }

@@ -10,17 +10,20 @@ import java.util.Scanner;
 
 import com.up.clinicavet.factory.ConnectionFactory;
 import com.up.clinicavet.interfac.IGenericDAO;
+import com.up.clinicavet.view.ViewPrincipal;
 
 public class Main {
 	public static void main(String[] args) {
 		
-//		IGenericDAO< Animal, Long> ClienteDAO = new AnimalDAO(id, nome) ; 
+		ViewPrincipal view = new ViewPrincipal();
+		view.setVisible(true);
 		
-		Connection con = null;
-		PreparedStatement stmt = null;
-		ResultSet rs = null;
-		
-		BuscaTodos(con, stmt, rs);
+		//		IGenericDAO< Animal, Long> ClienteDAO = new AnimalDAO(id, nome) ; 
+//		Connection con = null;
+//		PreparedStatement stmt = null;
+//		ResultSet rs = null;
+//		
+//		BuscaTodos(con, stmt, rs);
 //		BuscaEspecies(con, stmt, rs);
 //		BuscaNome(con, stmt, rs);
 //		BuscaTipo(con, stmt, rs);
