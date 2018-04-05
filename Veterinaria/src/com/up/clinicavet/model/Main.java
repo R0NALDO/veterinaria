@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
+import com.up.clinicavet.controller.ViewPrincipalController;
 import com.up.clinicavet.factory.ConnectionFactory;
 import com.up.clinicavet.interfac.IGenericDAO;
 import com.up.clinicavet.view.ViewPrincipal;
@@ -16,6 +17,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		ViewPrincipal view = new ViewPrincipal();
+		ViewPrincipalController controller = new ViewPrincipalController(view);
 		view.setVisible(true);
 		
 		//		IGenericDAO< Animal, Long> ClienteDAO = new AnimalDAO(id, nome) ; 
