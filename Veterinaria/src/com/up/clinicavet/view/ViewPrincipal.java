@@ -34,7 +34,7 @@ public class ViewPrincipal extends JFrame {
 		conteudoMenuPrincipal.add(btnAnimais);
 		conteudoMenuPrincipal.add(btnEspecies);
 
-		//ajuste o componente btnAnimais 5 pixels (a direita) do painel principal (âncora oeste)
+		//ajuste o componente btnAnimais 5 pixels (a direitaa) do painel principal (âncora oeste)
 		layout.putConstraint(SpringLayout.WEST, btnAnimais, 5, SpringLayout.WEST, conteudoMenuPrincipal);
 		//ajuste o componente btnAnimais 5 pixels (abaixo) do painel principal (âncora norte)
 		layout.putConstraint(SpringLayout.NORTH, btnAnimais, 5, SpringLayout.NORTH, conteudoMenuPrincipal);
