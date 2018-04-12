@@ -15,7 +15,7 @@ import com.up.clinicavet.view.ViewPrincipal;
 
 public class Main {
 	public static void main(String[] args) {
-		
+ 		
 		ViewPrincipal view = new ViewPrincipal();
 		ViewPrincipalController controller = new ViewPrincipalController(view);
 		view.setVisible(true);

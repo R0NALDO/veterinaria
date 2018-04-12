@@ -15,15 +15,13 @@ import com.up.clinicavet.model.Animal;
 
 public class ViewPrincipal extends JFrame {
 	private static final long serialVersionUID = 1L;
-		//itens da tela principal
 	private JButton btnAnimais = new JButton("Animais");
 	private JButton btnEspecies = new JButton("Espécies");
-	private JPanel conteudoMenuPrincipal;
-		//itens da janela de animais
 	private JButton btnVoltar = new JButton("Voltar");
+	private JPanel conteudoMenuPrincipal;
 	private JPanel conteudoManutencaoAnimais;
-	private ExibicaoAnimais modeloExibicaoAnimaisTabela;
 	private JTable tabelaAnimais;
+	private ExibicaoAnimais modeloExibicaoAnimaisTabela;
 	
 	public ViewPrincipal() {
 		conteudoMenuPrincipal = new JPanel();
@@ -34,26 +32,15 @@ public class ViewPrincipal extends JFrame {
 		conteudoMenuPrincipal.add(btnAnimais);
 		conteudoMenuPrincipal.add(btnEspecies);
 
-		//ajuste o componente btnAnimais 5 pixels (a direitaa) do painel principal (âncora oeste)
 		layout.putConstraint(SpringLayout.WEST, btnAnimais, 5, SpringLayout.WEST, conteudoMenuPrincipal);
-		//ajuste o componente btnAnimais 5 pixels (abaixo) do painel principal (âncora norte)
 		layout.putConstraint(SpringLayout.NORTH, btnAnimais, 5, SpringLayout.NORTH, conteudoMenuPrincipal);
-		//ajuste o componente btnEspecies 5 pixels (a direita) do painel principal (âncora oeste)
 		layout.putConstraint(SpringLayout.WEST, btnEspecies, 5, SpringLayout.WEST, conteudoMenuPrincipal);
-		//ajuste o componente btnAnimais 40 pixels (abaixo) do painel principal (âncora oeste)
 		layout.putConstraint(SpringLayout.NORTH, btnEspecies, 40, SpringLayout.NORTH, conteudoMenuPrincipal);
 
-		//caso queiram ajustar o tamanho da janela de acordo com as posições relativas dos componentes
-		//ajuste o tamano do conteúdo principal de acordo com a borda sul do botão espécies
-		//layout.putConstraint(SpringLayout.SOUTH, content, 5, SpringLayout.SOUTH, btnEspecies);
-		//ajuste o tamano do conteúdo principal de acordo com a borda leste do botão espécies
-		//layout.putConstraint(SpringLayout.EAST, content, 5, SpringLayout.EAST, btnAnimais);
-
-
-		this.setTitle("Clínica Veterinária UP");
+		this.setTitle("Clínica Veterinária");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.exibirTelaInicial();
-		
+				
 		//segunda parte da aula
 		modeloExibicaoAnimaisTabela = new ExibicaoAnimais();
 		tabelaAnimais = new JTable(modeloExibicaoAnimaisTabela);
@@ -69,11 +56,9 @@ public class ViewPrincipal extends JFrame {
 		}
 
 	private void exibirTelaInicial() {
-		// tamanho inicial da janela em pixels
-		this.setPreferredSize(new Dimension(120, 120));
-		// seta o conteúdo do painel atual (JFrame) como o JPAnel content recém criado
+		this.setPreferredSize(new Dimension(500, 500));
 		this.setContentPane(conteudoMenuPrincipal);
-		this.pack();// Ajusta o conteúdo (content) para o JFrame (ex.: ajuste de resolução)
+		this.pack();
 		
 	}
 	
@@ -88,7 +73,6 @@ public class ViewPrincipal extends JFrame {
 	
 	public void exibirTelaAnimais(List<Animal> animaisParaExibir) {
 		modeloExibicaoAnimaisTabela.setAnimaisTabela(animaisParaExibir);
-		// tamanho inicial da janela em pixels
 		this.setPreferredSize(new Dimension(400, 400));
 		this.setContentPane(conteudoManutencaoAnimais);
 		this.pack();
